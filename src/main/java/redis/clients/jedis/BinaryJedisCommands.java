@@ -101,7 +101,7 @@ public interface BinaryJedisCommands {
 
     byte[] srandmember(byte[] key);
 
-    Long zadd(byte[] key, double score, byte[] member);
+    boolean zadd(byte[] key, byte[] score, byte[] member);
 
     Set<byte[]> zrange(byte[] key, int start, int end);
 

@@ -332,8 +332,8 @@ public class BinaryClient extends Connection {
         sendCommand(SRANDMEMBER, key);
     }
 
-    public void zadd(final byte[] key, final double score, final byte[] member) {
-        sendCommand(ZADD, key, toByteArray(score), member);
+    public void zadd(final byte[] key, final byte[] score, final byte[] member) {
+        sendCommand(ZADD, key, score, member);
     }
 
     public void zrange(final byte[] key, final int start, final int end) {

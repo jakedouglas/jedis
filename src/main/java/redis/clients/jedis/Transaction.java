@@ -261,7 +261,7 @@ public class Transaction extends BinaryTransaction {
         client.srandmember(key);
     }
 
-    public void zadd(final String key, final double score, final String member) {
+    public void zadd(final String key, final String score, final String member) {
         client.zadd(key, score, member);
     }
 

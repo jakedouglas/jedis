@@ -286,7 +286,7 @@ public class BinaryTransaction {
         client.srandmember(key);
     }
 
-    public void zadd(final byte[] key, final double score, final byte[] member) {
+    public void zadd(final byte[] key, final byte[] score, final byte[] member) {
         client.zadd(key, score, member);
     }
 

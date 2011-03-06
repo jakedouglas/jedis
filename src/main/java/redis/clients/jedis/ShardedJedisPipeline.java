@@ -296,7 +296,7 @@ public abstract class ShardedJedisPipeline {
         results.add(new FutureResult(c));
     }
 
-    protected void zadd(String key, double score, String member) {
+    protected void zadd(String key, String score, String member) {
         Client c = jedis.getShard(key).getClient();
         c.zadd(key, score, member);
         results.add(new FutureResult(c));

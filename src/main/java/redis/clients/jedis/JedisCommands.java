@@ -107,7 +107,7 @@ public interface JedisCommands {
 
     String srandmember(String key);
 
-    Long zadd(String key, double score, String member);
+    boolean zadd(String key, String score, String member);
 
     Set<String> zrange(String key, int start, int end);
 

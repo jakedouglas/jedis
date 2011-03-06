@@ -1450,14 +1450,14 @@ public class BinaryJedis implements BinaryJedisCommands {
      * @param key
      * @param score
      * @param member
-     * @return Integer reply, specifically: 1 if the new element was added 0 if
+     * @return Boolean reply, specifically: true if the new element was added, or false if
      *         the element was already a member of the sorted set and the score
      *         was updated
      */
-    public Long zadd(final byte[] key, final double score, final byte[] member) {
+    public boolean zadd(final byte[] key, final byte[] score, final byte[] member) {
         checkIsInMulti();
         client.zadd(key, score, member);
-        return client.getIntegerReply();
+        return client.getBooleanReply();
     }
 
     public Set<byte[]> zrange(final byte[] key, final int start, final int end) {

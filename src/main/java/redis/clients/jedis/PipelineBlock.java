@@ -324,7 +324,7 @@ public abstract class PipelineBlock implements Commands {
         client.watch(keys);
     }
 
-    public void zadd(String key, double score, String member) {
+    public void zadd(String key, String score, String member) {
         client.zadd(key, score, member);
     }
 

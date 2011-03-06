@@ -265,7 +265,7 @@ public class BinaryShardedJedis extends Sharded<Jedis, JedisShardInfo>
         return j.srandmember(key);
     }
 
-    public Long zadd(byte[] key, double score, byte[] member) {
+    public boolean zadd(byte[] key, byte[] score, byte[] member) {
         Jedis j = getShard(key);
         return j.zadd(key, score, member);
     }

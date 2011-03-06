@@ -137,7 +137,7 @@ public interface Commands {
 
     public void srandmember(final String key);
 
-    public void zadd(final String key, final double score, final String member);
+    public void zadd(final String key, final String score, final String member);
 
     public void zrange(final String key, final int start, final int end);
 

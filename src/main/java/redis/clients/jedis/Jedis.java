@@ -1450,10 +1450,10 @@ public class Jedis extends BinaryJedis implements JedisCommands {
      *         the element was already a member of the sorted set and the score
      *         was updated
      */
-    public Long zadd(final String key, final double score, final String member) {
+    public boolean zadd(final String key, final String score, final String member) {
         runChecks();
         client.zadd(key, score, member);
-        return client.getIntegerReply();
+        return client.getBooleanReply();
     }
 
     public Set<String> zrange(final String key, final int start, final int end) {

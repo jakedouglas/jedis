@@ -622,11 +622,11 @@ public class Pipeline implements Commands {
         client.watch(keys);
     }
 
-    public void zadd(String key, double score, String member) {
+    public void zadd(String key, String score, String member) {
         client.zadd(key, score, member);
     }
 
-    public void zadd(byte[] key, double score, byte[] member) {
+    public void zadd(byte[] key, byte[] score, byte[] member) {
         client.zadd(key, score, member);
     }
 

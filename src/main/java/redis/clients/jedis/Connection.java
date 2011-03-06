@@ -174,6 +174,10 @@ public class Connection {
         return (Long) protocol.read(inputStream);
     }
 
+    public boolean getBooleanReply() {
+        return getIntegerReply() == 1;
+    }
+
     public List<String> getMultiBulkReply() {
         final List<byte[]> bresult = getBinaryMultiBulkReply();
         if (null == bresult) {
